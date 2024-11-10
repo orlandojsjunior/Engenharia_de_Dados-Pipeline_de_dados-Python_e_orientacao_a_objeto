@@ -2,26 +2,17 @@
 
 <div style="text-align: justify;">
 
-A formação Primeiros passos com Engenharia de Dados busca preparar iniciantes da área de Engenharia de Dados para os desafios do dia a dia profissional, usando Python, SQL, NoSQL e
-outras ferramentas.
+A formação "Primeiros Passos com Engenharia de Dados" é voltada para iniciantes e busca prepará-los para os desafios profissionais da área, utilizando ferramentas essenciais como Python, SQL, NoSQL e Airflow.
 
-Funciona como um guia de aprendizado para auxiliar pessoas interessadas em entrar no mercado de trabalho e também como mecanismo de consulta para profissionais experientes.
+Ferramentas e Tópicos Abordados:
 
-**O QUE É ENGENHARIA DE DADOS?**
+Python: Construção de pipelines ETL (Extract, Transform, Load) e aplicação de Programação Orientada a Objetos (POO) para melhorar a legibilidade do código.
 
-A Engenharia de Dados desempenha um papel crucial na indústria da tecnologia, permitindo que empresas de diversos setores coletem, armazenem, processem e analisem grandes volumes de dados em tempo real.
+SQL e NoSQL: Compreensão das diferenças e conceitos fundamentais dos bancos de dados relacionais e não relacionais.
 
-Profissionais especializados nessa área são responsáveis por projetar, implementar e manter a infraestrutura necessária para o gerenciamento eficiente dos dados de uma organização. Eles criam fluxos de dados que integram, limpam e transformam informações provenientes de diferentes fontes e formatos, possibilitando a geração de insights valiosos para a tomada de decisões empresariais.
+Airflow: Introdução ao gerenciamento de fluxos de dados, consolidando os conhecimentos adquiridos ao longo da formação.
 
-**O QUE VAMOS APRENDER?**
-
-Nesta formação, você terá a oportunidade de adquirir conhecimentos essenciais para ingressar na área de Engenharia de Dados. Exploraremos diversos tópicos fundamentais, como Python, SQL e pipelines de dados.
-
-Iniciaremos aprendendo a construir pipelines ETL (Extract, Transform e Load) utilizando a linguagem Python, além de compreender como aplicar Programação Orientada a Objetos (POO) para tornar seus códigos mais legíveis.
-
-Além disso, nesta formação, você terá a oportunidade de compreender a diferença entre bancos de dados SQL e NoSQL, assim como os principais conceitos relacionados a esses sistemas de armazenamento de dados.
-
-Por fim, você consolidará todos os conhecimentos adquiridos ao longo dessa formação, desenvolvendo um pipeline completo de Engenharia de Dados. Você terá um primeiro contato com uma das ferramentas de gerenciamento de fluxos de dados, o Airflow. Essa experiência irá ampliar ainda mais suas habilidades e prepará-lo para enfrentar desafios reais na área de dados.
+Essa formação oferece uma base sólida em Engenharia de Dados, preparando os alunos para enfrentar desafios reais na área.
 
 </div>
 
