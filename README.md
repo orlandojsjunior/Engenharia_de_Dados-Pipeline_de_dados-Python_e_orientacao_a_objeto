@@ -1,9 +1,8 @@
-
 # [Formação Primeiros passos com **Engenharia de Dados**](https://cursos.alura.com.br/formacao-engenharia-dados-primeiros-passos)
 
 <div style="text-align: justify;">
 
-A formação Primeiros passos com Engenharia de Dados busca preparar iniciantes da área de Engenharia de Dados para os desafios do dia a dia profissional, usando Python, SQL, NoSQL e 
+A formação Primeiros passos com Engenharia de Dados busca preparar iniciantes da área de Engenharia de Dados para os desafios do dia a dia profissional, usando Python, SQL, NoSQL e
 outras ferramentas.
 
 Funciona como um guia de aprendizado para auxiliar pessoas interessadas em entrar no mercado de trabalho e também como mecanismo de consulta para profissionais experientes.
@@ -36,19 +35,17 @@ Por fim, você consolidará todos os conhecimentos adquiridos ao longo dessa for
 - Reconheça os benefícios de criar um pipeline reutilizável
 - Estruture códigos Python em funções
 
-
-## PRÉ-REQUISITOS PARA FAZER ESSA FORMAÇÃO.
+## PRÉ-REQUISITOS PARA FAZER ESSA FORMAÇÃO
 
 Para aproveitar melhor esse conteúdo, é importante que você já tenha conhecimento dos conceitos-chave do Python aplicados à área de Data Science de forma abrangente.
 
 ![Jornada_em_Engenharia_de_dados](Jornada_em_Engenharia_de_dados.png)
 
-
 ## Passo a passo da Formação:
 
 <div style="text-align: justify;">
 
-**1 - Python para Engenharia de Dados**
+**1 - Python para Engenharia de Dados**.
 
 Neste passo inicial, o objetivo é que você se familiarize com a área da Engenharia de Dados, explorando o uso da linguagem Python e várias ferramentas de análise e gerenciamento de dados.
 
@@ -58,7 +55,7 @@ Você também vai aprender a usar o WSL para executar programas e comandos Linux
 
 </div>
 
-## Próximos Passos:
+## Próximos Passos
 
 2 - Sistemas de armazenamento de dados
 
