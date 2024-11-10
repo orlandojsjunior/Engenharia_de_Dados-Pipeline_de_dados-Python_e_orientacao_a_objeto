@@ -26,7 +26,7 @@ Por fim, você consolidará todos os conhecimentos adquiridos ao longo dessa for
 
 </div>
 
-## [Curso de Pipeline de dados: combinando Python e orientação a objeto](https://cursos.alura.com.br/course/pipeline-dados-combinando-python-orientacao-objeto)
+## **[Curso de Pipeline de dados: combinando Python e orientação a objeto](https://cursos.alura.com.br/course/pipeline-dados-combinando-python-orientacao-objeto)**
 
 ### Principais tópicos o curso:
 
@@ -57,7 +57,6 @@ Na primeira etapa dessa jornada, você irá descobrir os fundamentos da Engenhar
 Você também vai aprender a usar o WSL para executar programas e comandos Linux no Windows e a criar e gerenciar ambientes virtuais em Python. Além disso, terá uma introdução à Programação Orientada a Objetos (POO) e ao uso da biblioteca requests do Python para trabalhar com APIs. No final desta etapa, você será capaz de utilizar os principais recursos do Python para montar seus próprios pipelines e extrair, transformar e armazenar diferentes tipos de dados.
 
 </div>
-
 
 ## Próximos Passos:
 
