@@ -6,11 +6,11 @@ A formação "Primeiros Passos com Engenharia de Dados" é voltada para iniciant
 
 Ferramentas e Tópicos Abordados:
 
-Python: Construção de pipelines ETL (Extract, Transform, Load) e aplicação de Programação Orientada a Objetos (POO) para melhorar a legibilidade do código.
+* Python: Construção de pipelines ETL (Extract, Transform, Load) e aplicação de Programação Orientada a Objetos (POO) para melhorar a legibilidade do código.
 
-SQL e NoSQL: Compreensão das diferenças e conceitos fundamentais dos bancos de dados relacionais e não relacionais.
+* SQL e NoSQL: Compreensão das diferenças e conceitos fundamentais dos bancos de dados relacionais e não relacionais.
 
-Airflow: Introdução ao gerenciamento de fluxos de dados, consolidando os conhecimentos adquiridos ao longo da formação.
+* Airflow: Introdução ao gerenciamento de fluxos de dados, consolidando os conhecimentos adquiridos ao longo da formação.
 
 Essa formação oferece uma base sólida em Engenharia de Dados, preparando os alunos para enfrentar desafios reais na área.
 
