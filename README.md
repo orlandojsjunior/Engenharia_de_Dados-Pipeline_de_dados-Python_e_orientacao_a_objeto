@@ -18,13 +18,13 @@ Essa formação oferece uma base sólida em Engenharia de Dados, preparando os a
 
 ## **[Curso de Pipeline de dados: combinando Python e orientação a objeto](https://cursos.alura.com.br/course/pipeline-dados-combinando-python-orientacao-objeto)**
 
-### Principais tópicos o curso:
+### Principais tópicos o curso
 
-- Construa um pipeline de dados com Python
-- Refatore um código com orientação a objeto
-- Transforme dados utilizando apenas Python
-- Reconheça os benefícios de criar um pipeline reutilizável
-- Estruture códigos Python em funções
+* Construa um pipeline de dados com Python
+* Refatore um código com orientação a objeto
+* Transforme dados utilizando apenas Python
+* Reconheça os benefícios de criar um pipeline reutilizável
+* Estruture códigos Python em funções
 
 ## PRÉ-REQUISITOS PARA FAZER ESSA FORMAÇÃO
 
@@ -32,7 +32,7 @@ Para aproveitar melhor esse conteúdo, é importante que você já tenha conheci
 
 ![Jornada_em_Engenharia_de_dados](Jornada_em_Engenharia_de_dados.png)
 
-## Passo a passo da Formação:
+## Passo a passo da Formação
 
 <div style="text-align: justify;">
 
