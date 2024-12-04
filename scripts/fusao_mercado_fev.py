@@ -21,13 +21,10 @@ def leitura_csv(path_csv):
 
 def leitura_dados(path, tipo_arquivo):
     dados = []
-
     if tipo_arquivo == 'json':
         dados = leitura_jason(path)
-
     elif tipo_arquivo == 'csv':
         dados = leitura_csv(path)
-    
     return dados
 
 path_json = 'data_raw/dados_empresaA.json'
