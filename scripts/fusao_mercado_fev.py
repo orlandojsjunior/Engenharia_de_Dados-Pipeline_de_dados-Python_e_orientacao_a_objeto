@@ -40,7 +40,6 @@ def rename_columns(dados, key_mapping):
         for old_key, value in old_dict.items():
             dict_temp[key_mapping[old_key]] = value
         new_dados_csv.append(dict_temp)
-
     return new_dados_csv
 
 
@@ -67,9 +66,11 @@ key_mapping = {'Nome do Item': 'Nome do Produto',
                             'Data da Venda': 'Data da Venda'}
 key_mapping
 
+
 # Transformação dos dados
 
 dados_csv = rename_columns(dados_csv, key_mapping)
 
 nome_colunas_csv = get_columns(dados_csv)
+
 print(f"Nome colunas Renomadas: {nome_colunas_csv}")
