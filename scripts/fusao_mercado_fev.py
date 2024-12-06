@@ -1,6 +1,10 @@
 import json
 import csv
 
+# Importando a classe
+
+from processamento_dados import Dados
+
 
 # Funções
 
@@ -76,53 +80,59 @@ path_json = 'data_raw/dados_empresaA.json'
 path_csv = 'data_raw/dados_empresaB.csv'
 
 
-# Iniciando a leitura
+# Instanciando a classe
 
-dados_json = leitura_dados(path_json, 'json')
-nome_colunas_json = get_columns(dados_json)
-tamanho_dados_json = size_data(dados_json)
-
-print(f"Nome das colunas dados JSON: {nome_colunas_json}")
-print(f"Tamanho dos dados JSON: {tamanho_dados_json}")
+dados_empresaA = Dados(path_json, 'json');
+print(dados_empresaA.path)
 
 
-dados_csv = leitura_dados(path_csv, 'csv')
-nome_colunas_csv = get_columns(dados_csv)
-tamanho_dados_csv = size_data(dados_csv)
+# # Iniciando a leitura
 
-print(f"Nome das colunas dados CSV: {nome_colunas_csv}")
-print(f"Tamanho dos dados CSV: {tamanho_dados_csv}")
+# dados_json = leitura_dados(path_json, 'json')
+# nome_colunas_json = get_columns(dados_json)
+# tamanho_dados_json = size_data(dados_json)
 
-
-# Transformação dos dados
-
-key_mapping = {'Nome do Item': 'Nome do Produto',
-                            'Classificação do Produto': 'Categoria do Produto',
-                            'Valor em Reais (R$)': 'Preço do Produto (R$)',
-                            'Quantidade em Estoque': 'Quantidade em Estoque',
-                            'Nome da Loja': 'Filial',
-                            'Data da Venda': 'Data da Venda'}
-key_mapping
-
-dados_csv = rename_columns(dados_csv, key_mapping)
-nome_colunas_csv = get_columns(dados_csv)
-print(f"Nome das colunas Renomadas: {nome_colunas_csv}")
+# print(f"Nome das colunas dados JSON: {nome_colunas_json}")
+# print(f"Tamanho dos dados JSON: {tamanho_dados_json}")
 
 
-# Fusão dos dados
+# dados_csv = leitura_dados(path_csv, 'csv')
+# nome_colunas_csv = get_columns(dados_csv)
+# tamanho_dados_csv = size_data(dados_csv)
 
-dados_fusao = join(dados_json, dados_csv) 
-nomes_colunas_fusao = get_columns(dados_fusao)
-tamanho_dados_fusao = size_data(dados_fusao)
-
-print(f"Nome Colunas apos a Fusão:  {nomes_colunas_fusao}")
-print(f"Tamanho dos dados após a Fusão: {tamanho_dados_fusao}")
+# print(f"Nome das colunas dados CSV: {nome_colunas_csv}")
+# print(f"Tamanho dos dados CSV: {tamanho_dados_csv}")
 
 
-# Salvando os dados
+# # Transformação dos dados
 
-dados_fusao_tabela = transformando_dados_tabela(dados_fusao, nomes_colunas_fusao)
-path_dados_combinados = 'data_processed/dados_combinados.csv'
-salvando_dados(dados_fusao_tabela, path_dados_combinados)
-print(f"Os dados foram salvos em: {path_dados_combinados}")
+# key_mapping = {'Nome do Item': 'Nome do Produto',
+#                             'Classificação do Produto': 'Categoria do Produto',
+#                             'Valor em Reais (R$)': 'Preço do Produto (R$)',
+#                             'Quantidade em Estoque': 'Quantidade em Estoque',
+#                             'Nome da Loja': 'Filial',
+#                             'Data da Venda': 'Data da Venda'}
+# key_mapping
+
+# dados_csv = rename_columns(dados_csv, key_mapping)
+# nome_colunas_csv = get_columns(dados_csv)
+# print(f"Nome das colunas Renomadas: {nome_colunas_csv}")
+
+
+# # Fusão dos dados
+
+# dados_fusao = join(dados_json, dados_csv) 
+# nomes_colunas_fusao = get_columns(dados_fusao)
+# tamanho_dados_fusao = size_data(dados_fusao)
+
+# print(f"Nome Colunas apos a Fusão:  {nomes_colunas_fusao}")
+# print(f"Tamanho dos dados após a Fusão: {tamanho_dados_fusao}")
+
+
+# # Salvando os dados
+
+# dados_fusao_tabela = transformando_dados_tabela(dados_fusao, nomes_colunas_fusao)
+# path_dados_combinados = 'data_processed/dados_combinados.csv'
+# salvando_dados(dados_fusao_tabela, path_dados_combinados)
+# print(f"Os dados foram salvos em: {path_dados_combinados}")
 
