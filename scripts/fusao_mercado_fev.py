@@ -8,29 +8,29 @@ from processamento_dados import Dados
 
 # Funções
 
-def leitura_jason(path_json):
-    dados_json = []
-    with open(path_json, 'r') as file:
-        dados_json = json.load(file)
-    return dados_json
+# def leitura_jason(path_json):
+#     dados_json = []
+#     with open(path_json, 'r') as file:
+#         dados_json = json.load(file)
+#     return dados_json
 
 
-def leitura_csv(path_csv):
-    dados_csv = []
-    with open(path_csv, 'r') as file:
-        spamreader = csv.DictReader(file, delimiter=',')
-        for row in spamreader:
-            dados_csv.append(row)
-    return dados_csv
+# def leitura_csv(path_csv):
+#     dados_csv = []
+#     with open(path_csv, 'r') as file:
+#         spamreader = csv.DictReader(file, delimiter=',')
+#         for row in spamreader:
+#             dados_csv.append(row)
+#     return dados_csv
 
 
-def leitura_dados(path, tipo_arquivo):
-    dados = []
-    if tipo_arquivo == 'json':
-        dados = leitura_jason(path)
-    elif tipo_arquivo == 'csv':
-        dados = leitura_csv(path)
-    return dados
+# def leitura_dados(path, tipo_arquivo):
+#     dados = []
+#     if tipo_arquivo == 'csv':
+#         dados = leitura_csv(path)
+#     elif tipo_arquivo == 'json':
+#         dados = leitura_jason(path)
+#     return dados
 
 
 def get_columns(dados):
@@ -82,9 +82,12 @@ path_csv = 'data_raw/dados_empresaB.csv'
 
 # Instanciando a classe
 
-dados_empresaA = Dados(path_json, 'json');
-print(dados_empresaA.path)
+dados_empresaA = Dados(path_json, 'json')
+print(dados_empresaA.dados)
 
+
+dados_empresaB = Dados(path_csv, 'csv')
+print(dados_empresaB.dados)
 
 # # Iniciando a leitura
 
