@@ -3,6 +3,7 @@ import csv
 
 
 # Funções
+
 def leitura_jason(path_json):
     dados_json = []
     with open(path_json, 'r') as file:
@@ -29,12 +30,11 @@ def leitura_dados(path, tipo_arquivo):
 
 
 def get_columns(dados):
-    return list(dados[0].keys())
+    return list(dados[-1].keys()) # Razões para a Mudança: Garantir que as colunas sejam obtidas do último conjunto de dados, que pode ser o mais atualizado ou relevante.
 
 
 def rename_columns(dados, key_mapping):
     new_dados_csv = []
-    
     for old_dict in dados:
         dict_temp = {}
         for old_key, value in old_dict.items():
@@ -54,12 +54,30 @@ def join(dadosA, dadosB):
     return combined_list
 
 
+def transformando_dados_tabela(dados, nomes_colunas):
+    dados_combinados_tabela = [nomes_colunas]
+    for row in dados:
+        linha = []
+        for coluna in nomes_colunas:
+            linha.append(row.get(coluna, 'Indisponivel'))
+        dados_combinados_tabela.append(linha)
+    return dados_combinados_tabela
+
+
+def salvando_dados(dados, path):
+    with open(path_dados_combinados, 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(dados)
+
+
 # Definindo os paths dos arquivos
+
 path_json = 'data_raw/dados_empresaA.json'
 path_csv = 'data_raw/dados_empresaB.csv'
 
 
 # Iniciando a leitura
+
 dados_json = leitura_dados(path_json, 'json')
 nome_colunas_json = get_columns(dados_json)
 tamanho_dados_json = size_data(dados_json)
@@ -88,14 +106,23 @@ key_mapping
 
 dados_csv = rename_columns(dados_csv, key_mapping)
 nome_colunas_csv = get_columns(dados_csv)
-print(f"Nome colunas Renomadas: {nome_colunas_csv}")
+print(f"Nome das colunas Renomadas: {nome_colunas_csv}")
 
 
 # Fusão dos dados
 
-dados_fusao = join(dados_json, dados_csv)
+dados_fusao = join(dados_json, dados_csv) 
 nomes_colunas_fusao = get_columns(dados_fusao)
 tamanho_dados_fusao = size_data(dados_fusao)
 
-print(f"Nome das Colunas Fusão: {nomes_colunas_fusao}")
+print(f"Nome Colunas apos a Fusão:  {nomes_colunas_fusao}")
 print(f"Tamanho dos dados após a Fusão: {tamanho_dados_fusao}")
+
+
+# Salvando os dados
+
+dados_fusao_tabela = transformando_dados_tabela(dados_fusao, nomes_colunas_fusao)
+path_dados_combinados = 'data_processed/dados_combinados.csv'
+salvando_dados(dados_fusao_tabela, path_dados_combinados)
+print(f"Os dados foram salvos em: {path_dados_combinados}")
+
