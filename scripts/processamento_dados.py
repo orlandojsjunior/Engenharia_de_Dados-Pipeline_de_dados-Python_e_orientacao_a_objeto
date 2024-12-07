@@ -1,7 +1,7 @@
 import json
 import csv
 
-# Criando uma classeclass Dados:
+# Criando uma classe:
 class Dados:
 
     def __init__(self, path, tipo_dados):
