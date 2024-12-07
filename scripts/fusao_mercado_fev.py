@@ -69,7 +69,7 @@ def transformando_dados_tabela(dados, nomes_colunas):
 
 
 def salvando_dados(dados, path):
-    with open(path_dados_combinados, 'w', newline='') as file:
+    with open(path, 'w') as file:
         writer = csv.writer(file)
         writer.writerows(dados)
 
