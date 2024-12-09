@@ -33,18 +33,18 @@ from processamento_dados import Dados
 #     return dados
 
 
-def get_columns(dados):
-    return list(dados[-1].keys()) # Razões para a Mudança: Garantir que as colunas sejam obtidas do último conjunto de dados, que pode ser o mais atualizado ou relevante.
+# def get_columns(dados):
+#     return list(dados[-1].keys()) # Razões para a Mudança: Garantir que as colunas sejam obtidas do último conjunto de dados, que pode ser o mais atualizado ou relevante.
 
 
-def rename_columns(dados, key_mapping):
-    new_dados_csv = []
-    for old_dict in dados:
-        dict_temp = {}
-        for old_key, value in old_dict.items():
-            dict_temp[key_mapping[old_key]] = value
-        new_dados_csv.append(dict_temp)
-    return new_dados_csv
+# def rename_columns(dados, key_mapping):
+#     new_dados_csv = []
+#     for old_dict in dados:
+#         dict_temp = {}
+#         for old_key, value in old_dict.items():
+#             dict_temp[key_mapping[old_key]] = value
+#         new_dados_csv.append(dict_temp)
+#     return new_dados_csv
 
 
 def size_data(dados):
@@ -83,11 +83,26 @@ path_csv = 'data_raw/dados_empresaB.csv'
 # Instanciando a classe
 
 dados_empresaA = Dados(path_json, 'json')
-print(dados_empresaA.dados)
+print(f"Nomes colunas empresa A: {dados_empresaA.nome_colunas}")
 
 
 dados_empresaB = Dados(path_csv, 'csv')
-print(dados_empresaB.dados)
+print(f"Nomes colunas empresa B: {dados_empresaB.nome_colunas}")
+
+
+# Transform
+
+key_mapping = {'Nome do Item': 'Nome do Produto',
+                            'Classificação do Produto': 'Categoria do Produto',
+                            'Valor em Reais (R$)': 'Preço do Produto (R$)',
+                            'Quantidade em Estoque': 'Quantidade em Estoque',
+                            'Nome da Loja': 'Filial',
+                            'Data da Venda': 'Data da Venda'}
+key_mapping
+
+dados_empresaB.rename_columns(key_mapping)
+print(f"Nome das colunas Atualizados: {dados_empresaB.nome_colunas}")
+
 
 # # Iniciando a leitura
 
