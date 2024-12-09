@@ -101,7 +101,7 @@ key_mapping = {'Nome do Item': 'Nome do Produto',
 key_mapping
 
 dados_empresaB.rename_columns(key_mapping)
-print(f"Nome das colunas Atualizados: {dados_empresaB.nome_colunas}")
+print(f"Nomes colunas Atualizado:{dados_empresaB.nome_colunas}")
 
 
 # # Iniciando a leitura
