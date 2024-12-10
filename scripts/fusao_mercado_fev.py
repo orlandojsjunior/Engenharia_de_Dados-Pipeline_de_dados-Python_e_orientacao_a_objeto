@@ -67,7 +67,6 @@ def transformando_dados_tabela(dados, nomes_colunas):
         dados_combinados_tabela.append(linha)
     return dados_combinados_tabela
 
-
 def salvando_dados(dados, path):
     with open(path, 'w') as file:
         writer = csv.writer(file)

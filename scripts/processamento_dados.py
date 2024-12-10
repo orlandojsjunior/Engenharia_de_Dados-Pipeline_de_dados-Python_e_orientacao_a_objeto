@@ -10,14 +10,12 @@ class Dados:
         self.dados = self.leitura_dados()
         self.nome_colunas = self.get_columns()
         
-
     def leitura_json(self):
         dados_json = []
         with open(self.path, 'r') as file:
             dados_json = json.load(file)
-            
+        
         return dados_json
-
 
     def leitura_csv(self):
         dados_csv = []
@@ -25,17 +23,14 @@ class Dados:
             spamreader = csv.DictReader(file, delimiter=',')
             for row in spamreader:
                 dados_csv.append(row)
-
         return dados_csv
     
-
     def leitura_dados(self):
         dados = []
         if self.tipo_dados == 'csv':
             dados = self.leitura_csv()
         elif self.tipo_dados == 'json':
             dados = self.leitura_json()
-
         return dados
 
 
