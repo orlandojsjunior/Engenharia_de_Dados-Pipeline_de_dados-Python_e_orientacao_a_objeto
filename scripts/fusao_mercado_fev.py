@@ -83,11 +83,12 @@ path_csv = 'data_raw/dados_empresaB.csv'
 
 dados_empresaA = Dados(path_json, 'json')
 print(f"Nomes colunas empresa A: {dados_empresaA.nome_colunas}")
+print(f"Quantidade de linhas empresa A: {dados_empresaA.qtdlinhas}")
 
 
 dados_empresaB = Dados(path_csv, 'csv')
 print(f"Nomes colunas empresa B: {dados_empresaB.nome_colunas}")
-
+print(f"Quantidade de linhas empresa B: {dados_empresaB.qtdlinhas}")
 
 # Transform
 
@@ -100,8 +101,13 @@ key_mapping = {'Nome do Item': 'Nome do Produto',
 key_mapping
 
 dados_empresaB.rename_columns(key_mapping)
-print(f"Nomes colunas Atualizado:{dados_empresaB.nome_colunas}")
+print(f"Nomes colunas Atualizado: {dados_empresaB.nome_colunas}")
 
+# Fusão
+dados_fusao = Dados.join(dados_empresaA, dados_empresaB)
+
+print(f"Nomes colunas após fusão: {dados_fusao.nome_colunas}")
+print(f"Quantidades de linhas após fusão: {dados_fusao.qtdlinhas}")
 
 # # Iniciando a leitura
 
